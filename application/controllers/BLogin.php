@@ -7,7 +7,7 @@ class BLogin extends CI_Controller
     public function index(){
 
         $data['title'] = 'Admin Login | Buy Lands';
-        $data['message'] = '';
+        $data['error_message'] = '';
         $this->load->view('BackEnd/Login/login', $data);
     }
 
@@ -25,13 +25,13 @@ class BLogin extends CI_Controller
 
             $dbpassword = $dbpassword1[0]->password;
 
-            if($this->is_valid_password($password, $dbpassword)) {
+            if($this->isValidPassword($password, $dbpassword)) {
 
                 $user = $this->LoginModel->validateUser($username, $dbpassword);
 
-                if($this->is_blocked($user[0]->block_status)) {
+                if($this->isBlocked($user[0]->block_status)) {
 
-                    if($this->is_deactive($user[0]->active_status)) {
+                    if($this->isDeactive($user[0]->active_status)) {
                         $Login_User = array(
                             'ID' => $user[0]->account_id,
                             'Username' => $user[0]->username,
@@ -44,18 +44,18 @@ class BLogin extends CI_Controller
                         $this->session->set_userdata('User_Session', $Login_User);
                         redirect(base_url('BDashboard'));
                     }else{
-                        redirect(base_url('Login/deactive'));
+                        redirect(base_url('BLogin/deactive'));
                     }
 
                 }else{
-                    redirect(base_url('Login/blocked'));
+                    redirect(base_url('BLogin/blocked'));
                 }
 
             } else {
-                redirect(base_url('Login/invalid'));
+                redirect(base_url('BLogin/invalid'));
             }
         } else {
-            redirect(base_url('Login/invalid'));
+            redirect(base_url('BLogin/invalid'));
         }
     }
 
@@ -95,7 +95,7 @@ class BLogin extends CI_Controller
         $this->load->view('BackEnd/Login/login', $data);
     }
 
-    function is_valid_password($password, $dbpassword)
+    function isValidPassword($password, $dbpassword)
     {
 
         $hash = hash('sha256', $password);
@@ -103,7 +103,7 @@ class BLogin extends CI_Controller
         return $hash == $dbpassword;
     }
 
-    function is_blocked($blocked_status)
+    function isBlocked($blocked_status)
     {
 
         if($blocked_status == 1)
@@ -112,7 +112,7 @@ class BLogin extends CI_Controller
             return true;
     }
 
-    function is_deactive($active_status)
+    function isDeactive($active_status)
     {
 
         if($active_status == 1)

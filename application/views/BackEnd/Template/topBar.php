@@ -44,13 +44,13 @@
 </header>
 
 <!-- Main Header Nav For Mobile -->
-<div id="page" class="stylehome1 h0">
-    <div class="mobile-menu">
-        <div class="header stylehome1">
-            <div class="main_logo_home2 text-center">
-                <img class="nav_logo_img img-fluid mt20" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo2.png">
-                <span class="mt20">FindHouse</span>
-            </div>
-        </div>
-    </div><!-- /.mobile-menu -->
-</div>
+<!--<div id="page" class="stylehome1 h0">-->
+<!--    <div class="mobile-menu">-->
+<!--        <div class="header stylehome1">-->
+<!--            <div class="main_logo_home2 text-center">-->
+<!--                <img class="nav_logo_img img-fluid mt20" src="--><?php //echo base_url('assets') ?><!--/images/header-logo2.png" alt="header-logo2.png">-->
+<!--                <span class="mt20">FindHouse</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

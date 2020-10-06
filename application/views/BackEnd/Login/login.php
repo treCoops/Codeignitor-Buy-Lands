@@ -102,6 +102,9 @@
                             <div class="form-group">
                                 <input type="password" class="form-control" id="txt_password" name="txt_password" placeholder="Password">
                             </div>
+                            <div class="form-group">
+                                <h5 class="text-danger" style="text-align: center"><?php echo $error_message ?></h5>
+                            </div>
                             <button type="submit" class="btn btn-log btn-block btn-thm2">Login</button>
                             <br/><br/><br/>
                         </form>

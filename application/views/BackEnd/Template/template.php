@@ -21,6 +21,8 @@ if ($User_Session == null) {
 
     <?php $this->load->view('BackEnd/Template/leftBar'); ?>
 
+    <?php $this->load->view('BackEnd/Template/mobileNav'); ?>
+
 
     <!-- Our Dashbord -->
     <section class="our-dashbord dashbord bgc-f7 pb50">
@@ -29,13 +31,13 @@ if ($User_Session == null) {
                 <div class="col-lg-3 col-xl-2 dn-992 pl0"></div>
                 <div class="col-lg-9 col-xl-10 maxw100flex-992">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="dashboard_navigationbar dn db-992">
-                                <div class="dropdown">
-                                    <?php $this->load->view('BackEnd/Template/mobileNav'); ?>
-                                </div>
-                            </div>
-                        </div>
+<!--                        <div class="col-lg-12">-->
+<!--                            <div class="dashboard_navigationbar dn db-992">-->
+<!--                                <div class="dropdown">-->
+<!--                                   -->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                         <?php $this->load->view($content) ?>
                         <div class="row mt50">
                             <div class="col-lg-6 offset-lg-3">
