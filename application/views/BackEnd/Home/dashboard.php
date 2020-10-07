@@ -2,7 +2,7 @@
 
 $User_Session = $this->session->userdata('User_Session');
 if ($User_Session == null) {
-    redirect(base_url('Login/notLoggedIn'));
+    redirect(base_url('BLogin/notLoggedIn'));
 }
 
 ?>
@@ -114,3 +114,56 @@ if ($User_Session == null) {
     </div>
 </div>
 </div>
+
+<script>
+    function createConfig() {
+        return {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Dataset',
+                    borderColor: window.chartColors.red,
+                    backgroundColor: window.chartColors.red,
+                    data: [10, 30, 46, 2, 8, 50, 0],
+                    fill: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Sample tooltip with border'
+                },
+                tooltips: {
+                    position: 'nearest',
+                    mode: 'index',
+                    intersect: false,
+                    yPadding: 10,
+                    xPadding: 10,
+                    caretSize: 8,
+                    backgroundColor: 'rgba(72, 241, 12, 1)',
+                    titleFontColor: window.chartColors.black,
+                    bodyFontColor: window.chartColors.black,
+                    borderColor: 'rgba(0,0,0,1)',
+                    borderWidth: 4
+                },
+            }
+        };
+    }
+
+    $(document).ready(function() {
+        let c_container = document.querySelector('.c_container');
+        let div = document.createElement('div');
+        div.classList.add('chart-container');
+
+        let canvas = document.createElement('canvas');
+        div.appendChild(canvas);
+        c_container.appendChild(div);
+
+        let ctx = canvas.getContext('2d');
+        let config = createConfig();
+        new Chart(ctx, config);
+    });
+
+</script>

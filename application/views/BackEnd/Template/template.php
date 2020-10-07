@@ -1,9 +1,9 @@
 <?php
 
-$User_Session = $this->session->userdata('User_Session');
-if ($User_Session == null) {
-    redirect(base_url('Login/notLoggedIn'));
-}
+    $User_Session = $this->session->userdata('User_Session');
+    if ($User_Session == null) {
+        redirect(base_url('BLogin/notLoggedIn'));
+    }
 
 ?>
 
@@ -14,7 +14,7 @@ if ($User_Session == null) {
 </head>
 <body>
 <div class="wrapper">
-    <div class="preloader"></div>
+    <div id="loader" class="preloader"></div>
 
     <!-- Main Header Nav -->
     <?php $this->load->view('BackEnd/Template/topBar'); ?>
@@ -31,13 +31,6 @@ if ($User_Session == null) {
                 <div class="col-lg-3 col-xl-2 dn-992 pl0"></div>
                 <div class="col-lg-9 col-xl-10 maxw100flex-992">
                     <div class="row">
-<!--                        <div class="col-lg-12">-->
-<!--                            <div class="dashboard_navigationbar dn db-992">-->
-<!--                                <div class="dropdown">-->
-<!--                                   -->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
                         <?php $this->load->view($content) ?>
                         <div class="row mt50">
                             <div class="col-lg-6 offset-lg-3">

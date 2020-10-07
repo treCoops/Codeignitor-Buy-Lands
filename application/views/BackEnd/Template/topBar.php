@@ -1,3 +1,12 @@
+<?php
+
+    $User_Session = $this->session->userdata('User_Session');
+    if ($User_Session == null) {
+        redirect(base_url('BLogin/notLoggedIn'));
+    }
+
+?>
+
 <header class="header-nav menu_style_home_one style2 menu-fixed main-menu">
     <div class="container-fluid p0">
         <!-- Ace Responsive Menu -->
@@ -22,18 +31,15 @@
 
                 <li class="user_setting">
                     <div class="dropdown">
-                        <a class="btn dropdown-toggle" href="#" data-toggle="dropdown"><img class="rounded-circle" src="<?php echo base_url('assets') ?>/images/team/e1.png" alt="e1.png"> <span class="dn-1199">Ali Tufan</span></a>
+                        <a class="btn dropdown-toggle" href="#" data-toggle="dropdown"><img class="rounded-circle" style="width: 68px;" src="<?php echo base_url('assets') ?>/images/profile/<?php echo $User_Session['Profile_Pic'] ?>" alt="e1.png"> <span class="dn-1199"><?php echo $User_Session['Full_Name'] ?></span></a>
                         <div class="dropdown-menu">
                             <div class="user_set_header">
-                                <img class="float-left" src="<?php echo base_url('assets') ?>/images/team/e1.png" alt="e1.png">
-                                <p>Ali Tufan</p>
+                                <img class="float-left rounded-circle" style="width: 65px;" src="<?php echo base_url('assets') ?>/images/profile/<?php echo $User_Session['Profile_Pic'] ?>" alt="e1.png">
+                                <p><?php echo $User_Session['Full_Name'] ?></p>
                             </div>
                             <div class="user_setting_content">
                                 <a class="dropdown-item active" href="#">My Profile</a>
-                                <a class="dropdown-item" href="#">Messages</a>
-                                <a class="dropdown-item" href="#">Purchase history</a>
-                                <a class="dropdown-item" href="#">Help</a>
-                                <a class="dropdown-item" href="#">Log out</a>
+                                <a class="dropdown-item" href="<?php echo base_url('BLogin/logOut')?>">Log out</a>
                             </div>
                         </div>
                     </div>
@@ -42,15 +48,3 @@
         </nav>
     </div>
 </header>
-
-<!-- Main Header Nav For Mobile -->
-<!--<div id="page" class="stylehome1 h0">-->
-<!--    <div class="mobile-menu">-->
-<!--        <div class="header stylehome1">-->
-<!--            <div class="main_logo_home2 text-center">-->
-<!--                <img class="nav_logo_img img-fluid mt20" src="--><?php //echo base_url('assets') ?><!--/images/header-logo2.png" alt="header-logo2.png">-->
-<!--                <span class="mt20">FindHouse</span>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->

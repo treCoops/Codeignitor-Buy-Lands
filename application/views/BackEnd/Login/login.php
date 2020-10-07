@@ -17,8 +17,8 @@
 <!-- Title -->
 <title><?php echo $title ?></title>
 <!-- Favicon -->
-<link href="<?php echo base_url('assets') ?>/images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
-<link href="<?php echo base_url('assets') ?>/images/favicon.ico" sizes="128x128" rel="shortcut icon" />
+<link href="<?php echo base_url('assets') ?>/images/logo.png" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
+<link href="<?php echo base_url('assets') ?>/images/logo.png" sizes="128x128" rel="shortcut icon" />
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,7 +38,7 @@
             <nav>
                 <!-- Menu Toggle btn-->
                 <div class="menu-toggle">
-                    <img class="nav_logo_img img-fluid" src="<?php echo base_url('assets') ?>/images/header-logo.png" alt="header-logo.png">
+                    <img class="nav_logo_img img-fluid" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo.png">
                     <button type="button" id="menu-btn">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -46,9 +46,9 @@
                     </button>
                 </div>
                 <a href="#" class="navbar_brand float-left dn-smd">
-                    <img class="logo1 img-fluid" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo.png">
-                    <img class="logo2 img-fluid" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo2.png">
-                    <span>FindHouse</span>
+                    <img class="logo1 img-fluid" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo.png">
+                    <img class="logo2 img-fluid" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo2.png">
+                    <span>BuyLand</span>
                 </a>
                 <!-- Responsive Menu Structure-->
                 <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
@@ -68,8 +68,8 @@
         <div class="mobile-menu">
             <div class="header stylehome1">
                 <div class="main_logo_home2 text-center">
-                    <img class="nav_logo_img img-fluid mt20" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo2.png">
-                    <span class="mt20">FindHouse</span>
+                    <img class="nav_logo_img img-fluid mt20" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo2.png">
+                    <span class="mt20">BuyLand</span>
                 </div>
             </div>
         </div><!-- /.mobile-menu -->

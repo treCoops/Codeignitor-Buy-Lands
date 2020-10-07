@@ -126,7 +126,8 @@ Tag: advanced custom search, agency, agent, business, clean, corporate, director
 
 /*== Typography ==*/
 html {
-  font-size: 100%; }
+  font-size: 100%;
+}
 
 body {
   background-attachment: fixed;
@@ -732,6 +733,8 @@ ul.sign_up_btn.home6 a{
   height: auto;
   line-height: inherit;
 }
+
+
 .header_top.home7{
   background-color: transparent;
   height: 40px;
@@ -6466,14 +6469,22 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
 .my_profile_setting_input.form-group{
   margin-bottom: 30px;
 }
-.my_profile_setting_input label,
-.my_profile_setting_textarea label{
-  font-size: 16px;
-  font-family: "Nunito";
-  color: rgb(72, 72, 72);
-  font-weight: bold;
-  line-height: 1.5;
-}
+/*.my_profile_setting_input label,*/
+/*.my_profile_setting_textarea label{*/
+/*  font-size: 16px;*/
+/*  font-family: "Nunito";*/
+/*  color: rgb(72, 72, 72);*/
+/*  font-weight: bold;*/
+/*  line-height: 1.5;*/
+/*}*/
+
+/*input.error1,*/
+/*select.error1,*/
+/*textarea.error1 {*/
+/*  border: 3px solid #ff5a5f; !important;*/
+/*  color: #ff5a5f; !important;*/
+/*}*/
+
 .my_profile_setting_input .form-control{
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(235, 235, 235);
@@ -6481,6 +6492,8 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
   height: 52px;
   padding-left: 20px;
 }
+
+
 .my_profile_setting_input .form-control::placeholder{
   font-size: 14px;
   font-family: "Nunito";
