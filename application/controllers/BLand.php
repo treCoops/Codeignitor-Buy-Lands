@@ -102,7 +102,7 @@ class BLand extends CI_Controller
 
                     if ($c == count($data['totalFiles'])) {
                         $response['status'] = 200;
-                        $response['message'] = 'Land saved successfully.!';
+                        $response['message'] = 'Land added successfully.!';
                     } else {
                         $response['status'] = 500;
                         $response['message'] = 'Internal Server Error.!';
@@ -118,8 +118,6 @@ class BLand extends CI_Controller
             echo json_encode($response);
 
         }
-
-
     }
 
 

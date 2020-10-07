@@ -14,55 +14,54 @@ if ($User_Session == null) {
     </div>
 </div>
 <div class="col-lg-12">
-    <div class="my_dashboard_review">
-        <div class="row">
-            <div class="col-lg-12">
-                <h4 class="mb30">Create New Floor Plan</h4>
-                <div class="my_profile_setting_input ui_kit_select_search form-group">
-                    <label>Select house</label>
-                    <select class="selectpicker" id="cmbHouse" name="cmbHouse" data-live-search="true" data-width="100%">
-                        <option value="Status1">1</option>
-                        <option value="Status2">2</option>
-                        <option value="Status3">3</option>
-                        <option value="Status4">4</option>
-                        <option value="Status5">5</option>
-                        <option value="Status6">Other</option>
-                    </select>
+    <form id="formAddHousePlan" enctype="multipart/form-data" name="formAddHousePlan" role="form" method="POST">
+        <div class="my_dashboard_review">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="mb30">Create New Floor Plan</h4>
+                    <div class="my_profile_setting_input ui_kit_select_search form-group">
+                        <label>Select house</label>
+                        <select class="selectpicker" id="cmbHouse" name="cmbHouse" data-live-search="true" data-width="100%">
+                            <?php foreach ($houses as $data){ ?>
+                                <option value="<?php echo $data->house_id ?>"><?php echo $data->house_title ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="my_profile_setting_textarea">
-                    <label for="txtHouseDescription">Floor Plan Description</label>
-                    <textarea class="form-control" id="txtHouseDescription" name="txtHouseDescription" rows="7"></textarea>
+                <div class="col-lg-12">
+                    <div class="my_profile_setting_textarea">
+                        <label for="txtPlanDescription">Floor Plan Description</label>
+                        <textarea class="form-control" id="txtPlanDescription" name="txtPlanDescription" rows="7"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="my_dashboard_review mt30">
-        <div class="row">
-            <div class="col-lg-12">
-                <h4 class="mb30">Floor Pan media</h4>
-            </div>
-            <div class="col-lg-12">
-                <div class="custom-file-container" data-upload-id="mySecondImage">
-                    <label>Upload land images <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">✘</a></label>
-                    <label class="custom-file-container__custom-file" >
-                        <input type="file" class="custom-file-container__custom-file__custom-file-input" multiple>
-                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
-                        <span class="custom-file-container__custom-file__custom-file-control"></span>
-                    </label>
-                    <div class="custom-file-container__image-preview"></div>
+        <div class="my_dashboard_review mt30">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="mb30">Floor Pan media</h4>
                 </div>
-            </div>
+                <div class="col-lg-12">
+                    <div class="custom-file-container" data-upload-id="mySecondImage">
+                        <label>Upload land images <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">✘</a></label>
+                        <label class="custom-file-container__custom-file" >
+                            <input type="file" id="txtImages" name="txtImages[]" accept="image/*" class="custom-file-container__custom-file__custom-file-input" multiple>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                            <span class="custom-file-container__custom-file__custom-file-control"></span>
+                        </label>
+                        <div class="custom-file-container__image-preview"></div>
+                    </div>
+                </div>
 
-            <div class="col-xl-12">
-                <div class="my_profile_setting_input">
-                    <button class="btn btn1 float-left">Clear</button>
-                    <button class="btn btn2 float-right">Submit</button>
+                <div class="col-xl-12">
+                    <div class="my_profile_setting_input">
+                        <button class="btn btn1 float-left">Clear</button>
+                        <button class="btn btn2 float-right">Submit</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 </div>
 
 <a class="scrollToHome" href="#"><i class="flaticon-arrows"></i></a>
@@ -72,29 +71,55 @@ if ($User_Session == null) {
 
         let secondUpload = new FileUploadWithPreview('mySecondImage')
 
-        $('#cmbHouseProvince').change(function(){
-
-            let selected = $(this).val();
-            $("#cmbHouseDistrict").empty();
-            $("#cmbHouseDistrict").append('<option value="">Select a district</option>');
-            $("#cmbHouseDistrict").selectpicker("refresh");
-
-            $.ajax({
-                url: "<?php echo base_url(''); ?>/BLand/cGetRelatedDistrict",
-                data: {ID : selected},
-                method: "post",
-                dataType: "json",
-                error: function(error){
-                    console.log(error);
+        $("#formAddHousePlan").validate({
+            ignore: [],
+            rules: {
+                txtPlanDescription: {
+                    required: true
                 },
-                success: function(r){
-                    r.data.forEach(function(obj) {
-                        $("#cmbHouseDistrict").append('<option value="'+obj.district_id+'">'+obj.district_name+'</option>');
-                        $("#cmbHouseDistrict").selectpicker("refresh");
-                    })
+                txtImages: {
+                    required: true
                 }
-            });
+            },
+            messages: {
+                txtPlanDescription: {
+                    required: 'Floor plan description required!'
+                },
+                txtImages: {
+                    required: 'Floor plan images required!'
+                }
+            },
+            submitHandler: function (form) {
 
+                let formData = new FormData(form);
+                $('#loader').show()
+
+                $.ajax({
+                    url: '<?php echo base_url('BHouse/addHouseFloorPlan'); ?>',
+                    data: formData,
+                    dataType: 'json',
+                    method: 'post',
+                    processData: false,
+                    enctype: 'multipart/form-data',
+                    contentType: false,
+                    cache: false,
+                    error: function (error) {
+                        $('#loader').hide()
+                        $.notify("Internal server error", "error");
+                    },
+                    success: function (r) {
+                        $('#loader').hide()
+
+                        if (r.status === 200) {
+                            $.notify(r.message, "success");
+                        }
+
+                        if (r.status === 500) {
+                            $.notify(r.message, "error");
+                        }
+                    }
+                });
+            }
         });
     });
 

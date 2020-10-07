@@ -196,7 +196,7 @@ if ($User_Session == null) {
                 },
                 txtLandPrice: {
                     required: 'Land price required!',
-                    digits: 'Land price must be a digits only!'
+                    digits: 'Land price must have digits only!'
                 },
                 txtLandArea: {
                     required: 'Land area required!'

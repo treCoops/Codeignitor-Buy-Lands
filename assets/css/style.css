@@ -11200,7 +11200,7 @@ a.btn.btn_error{
 .user_setting:before{
   content: "";
   background-color: #e8eef2;
-  height: 38px;
+  height: 65px;
   position: absolute;
   top: 10px;
   width: 1px;
