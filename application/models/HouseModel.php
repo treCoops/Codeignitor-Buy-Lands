@@ -332,5 +332,13 @@ class HouseModel extends CI_Model
         return $result;
     }
 
+    function getCountOfHouse(){
+        $this->db->select('*');
+        $this->db->from('tbl_house');
+        $query = $this->db->get();
+
+        return $query->num_rows();
+    }
+
 }
 

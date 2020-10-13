@@ -23,7 +23,7 @@
             <a href="#" class="navbar_brand float-left dn-smd">
                 <img class="logo1 img-fluid" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo.png">
                 <img class="logo2 img-fluid" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo2.png">
-                <span>FindHouse</span>
+                <span>BuyLands.lk</span>
             </a>
             <!-- Responsive Menu Structure-->
             <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
@@ -38,7 +38,7 @@
                                 <p><?php echo $User_Session['Full_Name'] ?></p>
                             </div>
                             <div class="user_setting_content">
-                                <a class="dropdown-item active" href="#">My Profile</a>
+                                <a class="dropdown-item active" href="<?php echo base_url('BProfile/viewManageProfile') ?>">My Profile</a>
                                 <a class="dropdown-item" href="<?php echo base_url('BLogin/logOut')?>">Log out</a>
                             </div>
                         </div>

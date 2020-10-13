@@ -17,7 +17,7 @@
             <li><span>Main</span>
                 <ul>
                     <li><a href="<?php echo base_url('BDashboard') ?>">Dashboard</a></li>
-                    <li><a href="#">Message</a></li>
+                    <li><a href="<?php echo base_url('BMessage/viewMessage') ?>">Message</a></li>
                 </ul>
             </li>
 
@@ -37,7 +37,7 @@
                 </ul>
             </li>
 
-            <li><a href="#"><span class="flaticon-user"></span> My Profile</a></li>
+            <li><a href="<?php echo base_url('BProfile/viewManageProfile') ?>"><span class="flaticon-user"></span> My Profile</a></li>
             <li class="cl_btn"><a class="btn btn-block btn-lg btn-thm circle" href="<?php echo base_url('BLogin/logOut')?>"><span class="flaticon-logout"></span> Logout</a></li>
         </ul>
     </nav>

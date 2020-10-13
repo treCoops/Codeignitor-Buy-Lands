@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="advanced search custom, agency, agent, business, clean, corporate, directory, google maps, homes, listing, membership packages, property, real estate, real estate agent, realestate agency, realtor">
-    <meta name="description" content="FindHouse - Real Estate HTML Template">
     <meta name="CreativeLayers" content="ATFN">
     <!-- css file -->
     <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/bootstrap.min.css">
@@ -17,8 +16,8 @@
     <!-- Title -->
     <title>Buy Lands | 404</title>
     <!-- Favicon -->
-    <link href="<?php echo base_url('assets') ?>/images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
-    <link href="<?php echo base_url('assets') ?>/images/favicon.ico" sizes="128x128" rel="shortcut icon" />
+    <link href="<?php echo base_url('assets') ?>/images/logo.png" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
+    <link href="<?php echo base_url('assets') ?>/images/logo.png" sizes="128x128" rel="shortcut icon" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,9 +45,9 @@
                     </button>
                 </div>
                 <a href="#" class="navbar_brand float-left dn-smd">
-                    <img class="logo1 img-fluid" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo.png">
-                    <img class="logo2 img-fluid" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo2.png">
-                    <span>FindHouse</span>
+                    <img class="logo1 img-fluid" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo.png">
+                    <img class="logo2 img-fluid" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo2.png">
+                    <span>BuyLands.lk</span>
                 </a>
                 <!-- Responsive Menu Structure-->
                 <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
@@ -75,8 +74,8 @@
         <div class="mobile-menu">
             <div class="header stylehome1">
                 <div class="main_logo_home2 text-center">
-                    <img class="nav_logo_img img-fluid mt20" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo2.png">
-                    <span class="mt20">FindHouse</span>
+                    <img class="nav_logo_img img-fluid mt20" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo2.png">
+                    <span class="mt20">BuyLands.lk</span>
                 </div>
                 <ul class="menu_bar_home2">
                     <li class="list-inline-item list_s"><a href="page-register.html"><span class="flaticon-user"></span></a></li>

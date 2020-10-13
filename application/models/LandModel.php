@@ -157,4 +157,12 @@ class LandModel extends CI_Model
         return $result;
     }
 
+    function getCountOfLand(){
+        $this->db->select('*');
+        $this->db->from('tbl_land');
+        $query = $this->db->get();
+
+        return $query->num_rows();
+    }
+
 }

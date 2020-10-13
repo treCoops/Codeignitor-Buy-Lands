@@ -1,6 +1,5 @@
 
 <script data-cfasync="false" src="https://grandetest.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url('assets') ?>/js/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets') ?>/js/jquery-migrate-3.0.0.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets') ?>/js/popper.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets') ?>/js/bootstrap.min.js"></script>
@@ -17,5 +16,10 @@
 <script type="text/javascript" src="<?php echo base_url('assets') ?>/js/wow.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets') ?>/js/slider.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets') ?>/js/timepicker.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/validationengine/languages/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/validationengine/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/jquery-validation/jquery.validate.js"></script>
 <!-- Custom script for all pages -->
 <script type="text/javascript" src="<?php echo base_url('assets') ?>/js/script.js"></script>
+
+<script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/notify-js/notify.js"></script>

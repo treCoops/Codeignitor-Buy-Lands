@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/style.css">
 <!-- Responsive stylesheet -->
 <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/responsive.css">
+<script type="text/javascript" src="<?php echo base_url('assets') ?>/js/jquery-3.3.1.js"></script>
 <!-- Title -->
 <title><?php echo $title ?></title>
 <!-- Favicon -->
