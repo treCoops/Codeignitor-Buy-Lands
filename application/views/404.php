@@ -54,7 +54,7 @@
                 <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
                 <ul id="respMenu" class="ace-responsive-menu text-right" data-menu-style="horizontal">
                     <li>
-                        <a href="index3.html" class="title">Home</a>
+                        <a href="<?php echo base_url('Home'); ?>" class="title">Home</a>
                     </li>
                     <li>
                         <a href="page-listing-full-width-grid.html" class="title">All Propeties</a>
@@ -62,7 +62,7 @@
 
 
                     <li class="last">
-                        <a href="page-contact.html"><span class="title">Contact</span></a>
+                        <a href="<?php echo base_url('Contact'); ?>"><span class="title">Contact</span></a>
                     </li>
                 </ul>
             </nav>
@@ -86,9 +86,9 @@
         </div><!-- /.mobile-menu -->
         <nav id="menu" class="stylehome1">
             <ul>
-                <li><a href="index3.html">Home</a></li>
+                <li><a href="<?php echo base_url('Home'); ?>">Home</a></li>
                 <li><a href="page-listing-full-width-grid.html">Listing</a></li>
-                <li><a href="page-contact.html">Contact</a></li>
+                <li><a href="<?php echo base_url('Contact'); ?>">Contact</a></li>
             </ul>
         </nav>
     </div>

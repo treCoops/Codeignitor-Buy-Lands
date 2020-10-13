@@ -13,7 +13,7 @@
                         class="fa fa-angle-down pull-right"></i></a>
             <ul class="treeview-menu">
                 <li><a href="<?php echo base_url('BLand/viewAddLand') ?>"><i class="fa fa-circle"></i> Add Land</a></li>
-                <li><a href="<?php echo base_url('BLand/viewManageLand') ?>"><i class="fa fa-circle"></i> Manage Lands</a></li>
+                <li><a href="<?php echo base_url('BLand/viewManageLands') ?>"><i class="fa fa-circle"></i> Manage Lands</a></li>
             </ul>
         </li>
 
@@ -24,7 +24,7 @@
                 <li><a href="<?php echo base_url('BHouse/viewAddHouse') ?>"><i class="fa fa-circle"></i> Add House</a></li>
                 <li><a href="<?php echo base_url('BHouse/viewManageHouses') ?>"><i class="fa fa-circle"></i> Manage Houses</a></li>
                 <li><a href="<?php echo base_url('BHouse/viewAddFloorPlan') ?>"><i class="fa fa-circle"></i> Add Floor Plan</a></li>
-                <li><a href="<?php echo base_url('BHouse/viewFloorPlans') ?>"><i class="fa fa-circle"></i> Manage Floor Plans</a></li>
+                <li><a href="<?php echo base_url('BHouse/viewManageFloorPlans') ?>"><i class="fa fa-circle"></i> Manage Floor Plans</a></li>
             </ul>
         </li>
 

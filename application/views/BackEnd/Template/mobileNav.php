@@ -33,7 +33,7 @@
                     <li><a href="<?php echo base_url('BHouse/viewAddHouse') ?>">Add House</a></li>
                     <li><a href="<?php echo base_url('BHouse/viewManageHouses') ?>">Manage Houses</a></li>
                     <li><a href="<?php echo base_url('BHouse/viewAddFloorPlan') ?>">Add Floor Plan</a></li>
-                    <li><a href="<?php echo base_url('BHouse/viewFloorPlans') ?>">Manage Floor Plans</a></li>
+                    <li><a href="<?php echo base_url('BHouse/viewManageFloorPlans') ?>">Manage Floor Plans</a></li>
                 </ul>
             </li>
 

@@ -24,5 +24,7 @@
 <script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/validationengine/languages/jquery.validationEngine-en.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/validationengine/jquery.validationEngine.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/jquery-validation/jquery.validate.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/table/datatable/datatables.js"></script>
 
 <script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/notify-js/notify.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/confirm-js-alert/jquery-confirm.min.js"></script>

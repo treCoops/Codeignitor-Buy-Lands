@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/style.css">
 <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/dashbord_navitaion.css">
 <link rel="stylesheet" href="<?php echo base_url('assets') ?>/plugins/file-upload/file-upload-with-preview.min.css">
+<link rel="stylesheet" href="<?php echo base_url('assets') ?>/plugins/confirm-js-alert/jquery-confirm.min.css">
 
 <script type="text/javascript" src="<?php echo base_url('assets') ?>/js/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets') ?>/js/jquery-migrate-3.0.0.min.js"></script>
