@@ -2611,7 +2611,7 @@ input.amount4:focus{
   border: 1px solid #ebebeb;
   height: 50px;
   line-height: 35px;
-  width: 180px;
+  width: 150px;
 }
 .home1-advnc-search.home5 .search_option_two .dropdown.bootstrap-select>.dropdown-toggle{
   width: 100%;
@@ -2831,7 +2831,7 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
   height: 147px;
   left: auto;
   margin: 0 auto;
-  max-width: 304px;
+  max-width: 400px;
   padding: 40px 30px;
   position: absolute;
   right: 26%;

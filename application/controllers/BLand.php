@@ -76,6 +76,26 @@ class BLand extends CI_Controller
                     }
                 }
 
+                if (!empty($_FILES['txtPlanImage']['name'])) {
+                    $_FILES['file']['name'] = $_FILES['txtPlanImage']['name'];
+                    $_FILES['file']['type'] = $_FILES['txtPlanImage']['type'];
+                    $_FILES['file']['tmp_name'] = $_FILES['txtPlanImage']['tmp_name'];
+                    $_FILES['file']['error'] = $_FILES['txtPlanImage']['error'];
+                    $_FILES['file']['size'] = $_FILES['txtPlanImage']['size'];
+
+
+                    if ($this->upload->do_upload('file')) {
+                        $uploadData = $this->upload->data();
+                        $filename = $uploadData['file_name'];
+                        $save['land_plan_image'] = $filename;
+                    }else{
+                        $error = array('error' => $this->upload->display_errors());
+                        $response['error'] = $error;
+                    }
+                }
+
+
+
                 $save['land_title'] = $this->input->post('txtLandTitle');
                 $save['land_description'] = $this->input->post('txtLandDescription');
                 $save['land_price'] = $this->input->post('txtLandPrice');
@@ -324,6 +344,31 @@ class BLand extends CI_Controller
                         $response['error'] = $error;
                         $response['status'] = 500;
                     }
+                }
+            }
+
+            if (!empty($_FILES['txtPlanImage']['name'])) {
+                $_FILES['file']['name'] = $_FILES['txtPlanImage']['name'];
+                $_FILES['file']['type'] = $_FILES['txtPlanImage']['type'];
+                $_FILES['file']['tmp_name'] = $_FILES['txtPlanImage']['tmp_name'];
+                $_FILES['file']['error'] = $_FILES['txtPlanImage']['error'];
+                $_FILES['file']['size'] = $_FILES['txtPlanImage']['size'];
+
+
+                if ($this->upload->do_upload('file')) {
+                    $uploadData = $this->upload->data();
+                    $filename = $uploadData['file_name'];
+                    $save['land_plan_image'] = $filename;
+
+                    if($this->input->post('txtCurrentPlanImage') != null) {
+                        if (file_exists('assets/images/admin/uploads/' . $this->input->post('txtCurrentPlanImage'))) {
+                            unlink('assets/images/admin/uploads/' . $this->input->post('txtCurrentPlanImage'));
+                        }
+                    }
+
+                }else{
+                    $error = array('error' => $this->upload->display_errors());
+                    $response['error'] = $error;
                 }
             }
 

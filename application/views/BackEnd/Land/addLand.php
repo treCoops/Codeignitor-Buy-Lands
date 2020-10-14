@@ -106,6 +106,21 @@ if ($User_Session == null) {
                 </div>
 
                 <div class="col-lg-12">
+                    <h4 class="mb30">Land Plan</h4>
+                </div>
+                <div class="col-lg-12">
+                    <div class="custom-file-container" data-upload-id="myFirstImage">
+                        <label>Upload land plan image <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">✘</a></label>
+                        <label class="custom-file-container__custom-file" >
+                            <input type="file" id="txtPlanImage" name="txtPlanImage" accept="image/*" class="custom-file-container__custom-file__custom-file-input">
+                            <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                            <span class="custom-file-container__custom-file__custom-file-control"></span>
+                        </label>
+                        <div class="custom-file-container__image-preview"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
                     <div class="my_profile_setting_input form-group">
                         <label for="txtYoutubeLink">Youtube URL</label>
                         <input type="text" class="form-control" name="txtYoutubeLink" id="txtYoutubeLink">
@@ -148,6 +163,7 @@ if ($User_Session == null) {
 
     $(document).ready(function() {
         let secondUpload = new FileUploadWithPreview('mySecondImage');
+        let firstUpload = new FileUploadWithPreview('myFirstImage');
         populateCMBDistrict($('#cmbLandProvince option:selected').val())
 
         $('#cmbLandProvince').change(function(){

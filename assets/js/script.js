@@ -181,19 +181,21 @@
     $(document).on('ready', function() {
         $(".slider-range").slider({
             range: true,
-            min: 50000,
-            max: 130000,
-            values: [ 52239, 98514 ],
+            min: 1000000,
+            max: 5000000000,
+            values: [ 250000, 2500000000 ],
             slide: function( event, ui ) {
-                $( ".amount" ).val( ui.values[ 0 ] );
-                $( ".amount2" ).val( ui.values[ 1 ] );
+                $( ".amount" ).val( 'Rs '+ui.values[ 0 ].toLocaleString('en-US', { minimumFractionDigits: 0 }) );
+                $( ".amount2" ).val( 'Rs '+ui.values[ 1 ].toLocaleString('en-US', { minimumFractionDigits: 0 }) );
             }
         });
         $(".amount").change(function() {
             $(".slider-range").slider('values',0,$(this).val());
+            $(".slider-range").slider('values',1,$( ".amount" ).val());
         });
         $(".amount2").change(function() {
             $(".slider-range").slider('values',1,$(this).val());
+            $(".slider-range").slider('values',0,$(".amount2").val());
         });
     });
 

@@ -12,9 +12,9 @@
                 </button>
             </div>
             <a href="#" class="navbar_brand float-left dn-smd">
-                <img class="logo1 img-fluid" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo.png">
-                <img class="logo2 img-fluid" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo2.png">
-                <span>FindHouse</span>
+                <img class="logo1 img-fluid" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo.png">
+                <img class="logo2 img-fluid" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo2.png">
+                <span>BuyLands.lk</span>
             </a>
             <!-- Responsive Menu Structure-->
             <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
@@ -39,8 +39,8 @@
     <div class="mobile-menu">
         <div class="header stylehome1">
             <div class="main_logo_home2 text-center">
-                <img class="nav_logo_img img-fluid mt20" src="<?php echo base_url('assets') ?>/images/header-logo2.png" alt="header-logo2.png">
-                <span class="mt20">FindHouse</span>
+                <img class="nav_logo_img img-fluid mt20" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo2.png">
+                <span class="mt20">BuyLands.lk</span>
             </div>
             <ul class="menu_bar_home2">
                 <li class="list-inline-item list_s"><a href="page-register.html"><span class="flaticon-user"></span></a></li>

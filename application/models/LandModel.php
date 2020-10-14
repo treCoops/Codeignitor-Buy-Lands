@@ -165,4 +165,44 @@ class LandModel extends CI_Model
         return $query->num_rows();
     }
 
+    function getAllLands(){
+        $lands = array();
+
+        $this->db->select('*');
+        $this->db->from('tbl_land');
+        $this->db->where('land_status', 1);
+
+        $result = $this->db->get()->result();
+
+        foreach ($result as $land){
+            $data['land_id'] = $land->land_id;
+            $data['land_title'] = $land->land_title;
+            $data['land_price'] = $land->land_price;
+            $data['land_address'] = $land->land_address;
+            $data['land_city'] = $land->land_city;
+            $data['land_area'] = $land->land_area;
+            $data['land_image'] = $this->getRelatedLandImageForHome($land->land_id);
+
+            array_push($lands, $data);
+
+        }
+
+        return $lands;
+
+    }
+
+    function getRelatedLandImageForHome($id){
+        $this->db->select('img_url');
+        $this->db->from('tbl_image_land');
+        $this->db->where('property_master_id', $id);
+
+        $result = $this->db->get()->row();
+
+        if($result != null){
+            return $result->img_url;
+        }else{
+            return null;
+        }
+    }
+
 }
