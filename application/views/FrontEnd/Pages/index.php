@@ -95,7 +95,7 @@
             <div class="col-lg-12">
                 <div class="main-title mb40">
                     <h2>Houses</h2>
-                    <p>Handpicked houses by our team. <a class="float-right" href="#">View All <span class="flaticon-next"></span></a></p>
+                    <p>Handpicked houses by our team. <a class="float-right" href="<?php echo base_url('Property/all') ?>?type=house">View All <span class="flaticon-next"></span></a></p>
                 </div>
             </div>
             <div class="col-lg-12">
@@ -106,20 +106,20 @@
                                 <div class="thumb">
                                     <img class="img-whp" src="<?php echo base_url('assets') ?>/images/admin/uploads/<?php echo $val['house_image']; ?>" alt="fp1.jpg">
                                     <div class="thmb_cntnt">
-                                        <a class="fp_price" href="#">Rs. <?php echo number_format($val['house_price'], 0, '', ' '); ?><small></small></a>
+                                        <a class="fp_price" href="<?php echo base_url('House')  ?>?hid=<?php echo $val['house_id'] ?>">Rs. <?php echo number_format($val['house_price'], 0, '', ' '); ?><small></small></a>
                                     </div>
                                 </div>
                                 <div class="details">
-                                    <div class="tc_content">
+                                    <div class="tc_content"><a href="<?php echo base_url('House')  ?>?hid=<?php echo $val['house_id'] ?>">
                                         <h4><?php echo $val['house_title']; ?></h4>
                                         <p class="text-thm"><?php echo $val['house_type']; ?></p>
                                         <p><span class="flaticon-placeholder"></span><?php echo $val['house_address']; ?>, <?php echo $val['house_city']; ?></p>
                                         <ul class="prop_details mb0">
-                                            <li class="list-inline-item"><a href="#">Beds: <?php echo $val['house_bedrooms']; ?></a></li>
-                                            <li class="list-inline-item"><a href="#">Baths: <?php echo $val['house_bathrooms']; ?></a></li>
-                                            <li class="list-inline-item"><a href="#"><?php echo $val['house_area_size']; ?></a></li>
+                                            <li class="list-inline-item"><a href="<?php echo base_url('House')  ?>?hid=<?php echo $val['house_id'] ?>">Beds: <?php echo $val['house_bedrooms']; ?></a></li>
+                                            <li class="list-inline-item"><a href="<?php echo base_url('House')  ?>?hid=<?php echo $val['house_id'] ?>">Baths: <?php echo $val['house_bathrooms']; ?></a></li>
+                                            <li class="list-inline-item"><a href="<?php echo base_url('House')  ?>?hid=<?php echo $val['house_id'] ?>"><?php echo $val['house_area_size']; ?></a></li>
                                         </ul>
-                                    </div>
+                                    </a></div>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
             <div class="col-lg-12">
                 <div class="main-title mb40">
                     <h2>Lands</h2>
-                    <p>Handpicked land properties by our team. <a class="float-right" href="#">View All <span class="flaticon-next"></span></a></p>
+                    <p>Handpicked land properties by our team. <a class="float-right" href="<?php echo base_url('Property/all') ?>?type=land">View All <span class="flaticon-next"></span></a></p>
                 </div>
             </div>
             <div class="col-lg-12">
@@ -164,16 +164,18 @@
                                 <div class="thumb">
                                     <img class="img-whp" src="<?php echo base_url('assets') ?>/images/admin/uploads/<?php echo $val['land_image'] ?>" alt="fp1.jpg">
                                     <div class="thmb_cntnt">
-                                        <a class="fp_price" href="#">Rs. <?php echo number_format($val['land_price'], 0, '', ' '); ?><small></small></a>
+                                        <a class="fp_price" href="<?php echo base_url('Land')  ?>?lid=<?php echo $val['land_id'] ?>">Rs. <?php echo number_format($val['land_price'], 0, '', ' '); ?><small></small></a>
                                     </div>
                                 </div>
+
                                 <div class="details">
-                                    <div class="tc_content">
-                                        <h4><?php echo $val['land_title'] ?></h4>
-                                        <p><span class="flaticon-placeholder"></span> <?php echo $val['land_address'] ?>, <?php echo $val['land_city'] ?></p>
+                                    <div class="tc_content"><a href="<?php echo base_url('Land')  ?>?lid=<?php echo $val['land_id'] ?>">
+                                        <a href="<?php echo base_url('Land')  ?>?lid=<?php echo $val['land_id'] ?>"><h4><?php echo $val['land_title'] ?></h4></a>
+                                        <a href="<?php echo base_url('Land')  ?>?lid=<?php echo $val['land_id'] ?>"><p><span class="flaticon-placeholder"></span> <?php echo $val['land_address'] ?>, <?php echo $val['land_city'] ?></p></a>
                                         <ul class="prop_details mb0">
-                                            <li class="list-inline-item"><a href="#"><?php echo $val['land_area'] ?></a></li>
+                                            <li class="list-inline-item"><a href="<?php echo base_url('Land')  ?>?lid=<?php echo $val['land_id'] ?>"><?php echo $val['land_area'] ?></a></li>
                                         </ul>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

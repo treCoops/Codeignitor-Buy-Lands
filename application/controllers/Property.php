@@ -83,4 +83,21 @@ class Property extends CI_Controller
         $this->load->view('FrontEnd/Template/template', $data);
     }
 
+
+    function all(){
+        $data['content'] = 'FrontEnd/Pages/allListPage';
+        $data['title'] = 'Buy Lands | All Properties';
+
+        if($this->input->get('type') == 'land'){
+            $data['properties'] = $this->SearchModel->getAllLands();
+        }else{
+            $data['properties'] = $this->SearchModel->getAllHouses();
+        }
+
+        $data['type'] = $this->input->get('type');
+        $data['provinces'] = $this->LocationModel->getAllProvince();
+
+        $this->load->view('FrontEnd/Template/template', $data);
+    }
+
 }

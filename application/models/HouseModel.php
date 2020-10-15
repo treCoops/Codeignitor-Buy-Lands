@@ -384,5 +384,103 @@ class HouseModel extends CI_Model
         return $query->num_rows();
     }
 
+    function getHouseDataSingle($id){
+
+        $houses = array();
+
+        $this->db->select('*');
+        $this->db->from('tbl_house');
+        $this->db->join('tbl_district', 'tbl_district.district_id = tbl_house.house_district');
+        $this->db->join('tbl_province', 'tbl_province.province_id = tbl_house.house_province');
+        $this->db->where('house_status', 1);
+        $this->db->where('house_id', $id);
+
+        $result = $this->db->get()->result();
+
+        foreach ($result as $house){
+            $data['house_id'] = $house->house_id;
+            $data['house_title'] = $house->house_title;
+            $data['house_description'] = $house->house_description;
+            $data['house_price'] = $house->house_price;
+            $data['house_type'] = $house->house_type;
+            $data['house_address'] = $house->house_address;
+            $data['house_city'] = $house->house_city;
+            $data['house_district'] = $house->district_name;
+            $data['house_province'] = $house->province_name;
+            $data['house_land_size'] = $house->house_land_size;
+            $data['house_area_size'] = $house->house_area_size;
+            $data['house_built_year'] = $house->house_built_year;
+            $data['house_area_size'] = $house->house_area_size;
+            $data['house_bedrooms'] = $house->house_bedrooms;
+            $data['house_bathrooms'] = $house->house_bathrooms;
+            $data['house_garages'] = $house->house_garages;
+            $data['house_garage_size'] = $house->house_garage_size;
+            $data['house_youtube_url'] = $house->house_youtube_url;
+            $data['house_floor_plan'] = $this->getRelatedHouseFloorPlanForSingle($house->house_id);
+            $data['house_image'] = $this->getRelatedHouseImageForSingle($house->house_id);
+
+            array_push($houses, $data);
+
+        }
+
+        return $houses;
+
+    }
+
+    function getRelatedHouseImageForSingle($id){
+        $this->db->select('img_url');
+        $this->db->from('tbl_image_house');
+        $this->db->where('property_master_id', $id);
+
+        $result = $this->db->get()->result();
+
+        if($result != null){
+            return $result;
+        }else{
+            return null;
+        }
+    }
+
+    function getRelatedHouseFloorPlanForSingle($id){
+
+        $plans = array();
+
+        $this->db->select('*');
+        $this->db->from('tbl_house_floor_plan');
+        $this->db->where('house_master_id', $id);
+
+        $result = $this->db->get()->result();
+
+        if($result != null){
+
+            foreach ($result as $plan){
+                $data['plan_description'] = $plan->plan_description;
+                $data['plan_images'] = $this->getRelatedPlanImageForSingle($plan->house_plan_id);
+
+                array_push($plans, $data);
+            }
+
+            return $plans;
+
+        }else{
+            return null;
+        }
+    }
+
+
+    function getRelatedPlanImageForSingle($id){
+        $this->db->select('img_url');
+        $this->db->from('tbl_image_house_plan');
+        $this->db->where('property_master_id', $id);
+
+        $result = $this->db->get()->result();
+
+        if($result != null){
+            return $result;
+        }else{
+            return null;
+        }
+    }
+
 }
 

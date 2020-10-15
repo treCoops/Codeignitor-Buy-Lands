@@ -112,7 +112,7 @@
                 </div>
                 <div class="row">
 
-                    <?php if($type == 'Land') { foreach ($properties as $data){ ?>
+                    <?php if($type == 'land') { foreach ($properties as $data){ ?>
                         <div class="col-md-6 col-lg-4">
                             <div class="feat_property home7 style4">
                                 <div class="thumb">

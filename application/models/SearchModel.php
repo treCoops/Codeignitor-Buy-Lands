@@ -3,6 +3,31 @@
 
 class SearchModel extends CI_Model
 {
+    function getAllLands(){
+        $lands = array();
+
+        $this->db->select('*');
+        $this->db->from('tbl_land');
+        $this->db->where('land_status', 1);
+
+        $result = $this->db->get()->result();
+
+        foreach ($result as $land){
+            $data['land_id'] = $land->land_id;
+            $data['land_title'] = $land->land_title;
+            $data['land_price'] = $land->land_price;
+            $data['land_address'] = $land->land_address;
+            $data['land_city'] = $land->land_city;
+            $data['land_area'] = $land->land_area;
+            $data['land_image'] = $this->getRelatedLandImage($land->land_id);
+
+            array_push($lands, $data);
+
+        }
+
+        return $lands;
+    }
+
     function searchLandByKeywordType($keyword){
 
         $lands = array();
@@ -115,6 +140,34 @@ class SearchModel extends CI_Model
 
         return $lands;
 
+    }
+
+    function getAllHouses(){
+        $houses = array();
+
+        $this->db->select('*');
+        $this->db->from('tbl_house');
+        $this->db->where('house_status', 1);
+
+        $result = $this->db->get()->result();
+
+        foreach ($result as $house){
+            $data['house_id'] = $house->house_id;
+            $data['house_title'] = $house->house_title;
+            $data['house_price'] = $house->house_price;
+            $data['house_type'] = $house->house_type;
+            $data['house_address'] = $house->house_address;
+            $data['house_city'] = $house->house_city;
+            $data['house_area_size'] = $house->house_area_size;
+            $data['house_bedrooms'] = $house->house_bedrooms;
+            $data['house_bathrooms'] = $house->house_bathrooms;
+            $data['house_image'] = $this->getRelatedHouseImage($house->house_id);
+
+            array_push($houses, $data);
+
+        }
+
+        return $houses;
     }
 
     function searchHouseByKeywordType($keyword, $type){

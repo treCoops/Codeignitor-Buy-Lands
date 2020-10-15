@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <a href="#" class="navbar_brand float-left dn-smd">
+            <a href="<?php echo base_url('Home'); ?>" class="navbar_brand float-left dn-smd">
                 <img class="logo1 img-fluid" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo.png">
                 <img class="logo2 img-fluid" src="<?php echo base_url('assets') ?>/images/buyland.png" alt="header-logo2.png">
                 <span>BuyLands.lk</span>
@@ -23,10 +23,11 @@
                     <a href="<?php echo base_url('Home'); ?>" class="title">Home</a>
                 </li>
                 <li>
-                    <a href="page-listing-full-width-grid.html" class="title">All Propeties</a>
+                    <a href="<?php echo base_url('Property/all') ?>?type=land" class="title">All Lands</a>
                 </li>
-
-
+                <li>
+                    <a href="<?php echo base_url('Property/all') ?>?type=house" class="title">All Houses</a>
+                </li>
                 <li class="last">
                     <a href="<?php echo base_url('Contact'); ?>"><span class="title">Contact</span></a>
                 </li>
@@ -43,7 +44,7 @@
                 <span class="mt20">BuyLands.lk</span>
             </div>
             <ul class="menu_bar_home2">
-                <li class="list-inline-item list_s"><a href="page-register.html"><span class="flaticon-user"></span></a></li>
+                <li class="list-inline-item list_s"><a href=""><span class="flaticon-user"></span></a></li>
                 <li class="list-inline-item"><a href="#menu"><span></span></a></li>
             </ul>
         </div>
@@ -51,7 +52,8 @@
     <nav id="menu" class="stylehome1">
         <ul>
             <li><a href="<?php echo base_url('Home'); ?>">Home</a></li>
-            <li><a href="page-listing-full-width-grid.html">Listing</a></li>
+            <li><a href="<?php echo base_url('Property/allLands') ?>?type=land">All Lands</a></li>
+            <li><a href="<?php echo base_url('Property/allHouses') ?>?type=house">All Houses</a></li>
             <li><a href="<?php echo base_url('Contact'); ?>">Contact</a></li>
         </ul>
     </nav>
