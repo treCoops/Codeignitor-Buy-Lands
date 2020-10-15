@@ -60,23 +60,23 @@
             <div class="col-lg-5 col-xl-4">
                 <div class="contact_localtion">
                     <h4>Contact Us</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida quis libero eleifend ornare. habitasse platea dictumst.</p>
+                    <p>We’re reimagining how you buy, sell properties. It’s now easier to get into a place you love. So let’s do this, together.</p>
                     <div class="content_list">
                         <h5>Address</h5>
-                        <p>2301 Ravenswood Rd Madison, <br>WI 53711</p>
+                        <p>No.320/B/5, Siri Nanda Jothikarama, <br>Thalawathugoda, Colombo</p>
                     </div>
                     <div class="content_list">
                         <h5>Phone</h5>
-                        <p>(315) 905-2321</p>
+                        <p>+94 77-0565-532</p>
                     </div>
-                    <div class="content_list">
-                        <h5>Mail</h5>
-                        <p><a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bdd4d3dbd2fddbd4d3d9d5d2c8ced893ded2d0">[email&#160;protected]</a></p>
-                    </div>
-                    <div class="content_list">
-                        <h5>Skype</h5>
-                        <p>findhouse.com</p>
-                    </div>
+<!--                    <div class="content_list">-->
+<!--                        <h5>Mail</h5>-->
+<!--                        <p><a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bdd4d3dbd2fddbd4d3d9d5d2c8ced893ded2d0">[email&#160;protected]</a></p>-->
+<!--                    </div>-->
+<!--                    <div class="content_list">-->
+<!--                        <h5>Skype</h5>-->
+<!--                        <p>findhouse.com</p>-->
+<!--                    </div>-->
                     <h5>Follow Us</h5>
                     <ul class="contact_form_social_area">
                         <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>

@@ -11,9 +11,7 @@
                 <div class="footer_qlink_widget">
                     <h4>Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="page-faq.html">FAQ</a></li>
+                        <li><a href="<?php echo base_url('Contact'); ?>">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,17 +34,17 @@
                         <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
                     </ul>
-                    <h4>Let us call You</h4>
-                    <form class="footer_mailchimp_form">
-                        <div class="form-row align-items-center">
-                            <div class="col-auto">
-                                <input type="Phone" class="form-control mb-2" id="inlineFormInput" placeholder="0712345678">
-                            </div>
-                            <div class="col-auto">
-                                <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-angle-right"></i></button>
-                            </div>
-                        </div>
-                    </form>
+<!--                    <h4>Let us call You</h4>-->
+<!--                    <form class="footer_mailchimp_form">-->
+<!--                        <div class="form-row align-items-center">-->
+<!--                            <div class="col-auto">-->
+<!--                                <input type="Phone" class="form-control mb-2" id="inlineFormInput" placeholder="0712345678">-->
+<!--                            </div>-->
+<!--                            <div class="col-auto">-->
+<!--                                <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-angle-right"></i></button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </form>-->
                 </div>
             </div>
         </div>
@@ -60,9 +58,10 @@
             <div class="col-lg-6 col-xl-6">
                 <div class="footer_menu_widget">
                     <ul>
-                        <li class="list-inline-item"><a href="index3.html">Home</a></li>
-                        <li class="list-inline-item"><a href="page-listing-full-width-grid.html">All Properties</a></li>
-                        <li class="list-inline-item"><a href="page-contact.html">Contact</a></li>
+                        <li class="list-inline-item"><a href="<?php echo base_url('Home'); ?>">Home</a></li>
+                        <li class="list-inline-item"><a href="<?php echo base_url('Property/all') ?>?type=land">All Lands</a></li>
+                        <li class="list-inline-item"><a href="<?php echo base_url('Property/all') ?>?type=house">All Houses</a></li>
+                        <li class="list-inline-item"><a href="<?php echo base_url('Contact'); ?>">Contact</a></li>
                     </ul>
                 </div>
             </div>
